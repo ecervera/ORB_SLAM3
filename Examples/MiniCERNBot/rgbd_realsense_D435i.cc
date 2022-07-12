@@ -401,7 +401,11 @@ int main(int argc, char **argv) {
         SLAM.InsertTrackTime(t_track);
 #endif
     }
-    cout << "System shutdown!\n";
+    SLAM.Shutdown();
+    SLAM.SaveTrajectoryTUM("CameraTrajectory.txt");
+    SLAM.SaveKeyFrameTrajectoryTUM("KeyFrameTrajectory.txt");
+    cout << "Finished!!!\n";
+    return 0;
 }
 
 rs2_stream find_stream_to_align(const std::vector<rs2::stream_profile>& streams)
