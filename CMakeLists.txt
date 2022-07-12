@@ -391,11 +391,11 @@ endif()
 
 #MiniCERNBot examples
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples/MiniCERNBot)
-add_executable(rgbd_realsense_D435i
+add_executable(rgbd_minicernbot
         Examples/MiniCERNBot/rgbd_realsense_D435i.cc)
 target_link_libraries(rgbd_realsense_D435i ${PROJECT_NAME})
 
-add_executable(rgbd_inertial_realsense_D435i
+add_executable(rgbd_inertial_minicernbot
         Examples/MiniCERNBot/rgbd_inertial_realsense_D435i.cc)
 target_link_libraries(rgbd_inertial_realsense_D435i ${PROJECT_NAME})
 
