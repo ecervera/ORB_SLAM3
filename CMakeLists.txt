@@ -399,3 +399,7 @@ add_executable(rgbd_inertial_minicernbot
         Examples/MiniCERNBot/rgbd_inertial_realsense_D435i.cc)
 target_link_libraries(rgbd_inertial_minicernbot ${PROJECT_NAME})
 
+add_executable(print_map_points
+        Examples/MiniCERNBot/print_map_points.cc)
+target_link_libraries(print_map_points ${PROJECT_NAME})
+
