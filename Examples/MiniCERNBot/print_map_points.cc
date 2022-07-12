@@ -47,7 +47,15 @@ int main(int argc, char **argv) {
              << endl;
         return 1;
     }
+    
+    string file_name;
+    bool bFileName = false;
 
+    if (argc == 4) {
+        file_name = string(argv[argc - 1]);
+        bFileName = true;
+    }
+    
     ORB_SLAM3::System tempSLAM(argv[1], argv[2], ORB_SLAM3::System::RGBD, false, 0, file_name);
     ORB_SLAM3::Atlas* mpAtlas = tempSLAM.GetAtlas();
     std::vector<ORB_SLAM3::Map*> allMaps = mpAtlas->GetAllMaps();
