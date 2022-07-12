@@ -561,6 +561,10 @@ void System::Shutdown()
 
 }
 
+Atlas* System::GetAtlas() {
+    return mpAtlas;
+}
+
 bool System::isShutDown() {
     unique_lock<mutex> lock(mMutexReset);
     return mbShutDown;
