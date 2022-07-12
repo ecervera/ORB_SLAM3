@@ -14,11 +14,12 @@ RUN wget --no-check-certificate https://github.com/IntelRealSense/librealsense/a
     make && \
     make install
 
-ADD https://api.github.com/repos/ecervera/ORB_SLAM3/git/refs/heads/master version.json
+ADD https://api.github.com/repos/ecervera/ORB_SLAM3/git/refs/heads/load_save version.json
 
 RUN cd /tmp/ORB_SLAM3 && \
     git remote set-url origin https://github.com/ecervera/ORB_SLAM3.git && \
     git pull
 
 RUN cd /tmp/ORB_SLAM3 && \
+    git checkout load_save && \
     ./build.sh
